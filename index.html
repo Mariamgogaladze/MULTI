@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Mariam Gogaladze">
+        <meta name="description" content="Multi-step form">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORM</title>
+        <link rel="icon" href="coding.png" type="image/png">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow:wght@500;600&family=Be+Vietnam+Pro:wght@400;500;700&family=Delicious+Handrawn&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karma:wght@300;400&family=Manrope:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@100;400;700&family=Rubik:wght@400;500;700&family=Shantell+Sans&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <!-- Sidebar -->
+      <div class="form-sidebar">
+        <div class="step active">
+          <div class="circle">1</div>
+          <div class="step-content">
+            <span>Step 1</span>
+            <b>Your info</b>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">2</div>
+          <div class="step-content">
+            <span>Step 2</span>
+            <b>Select plan</b>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">3</div>
+          <div class="step-content">
+            <span>Step 3</span>
+            <b>Add-ons</b>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">4</div>
+          <div class="step-content">
+            <span>Step 4</span>
+            <b>Summary</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+
+    <main>
+
+<!--  FIRST SECTION  -->
+
+<section class="page active" id="first-step">
+  <header>
+    <h1>Personal info</h1> 
+  <p>Please provide your name, email  adress, and phone number</p>
+  </header>
+  <form id="myForm">
+     <div class="errorDiv">
+      <label for="name" title="Please enter your full name, including your first and last name." tabindex="1">Name</label><br>
+      <span class="errorMessage">This field is required</span>
+     </div>
+      <input  name="name "type="text" id="userName" placeholder="e.g Stephen King" autocomplete="username" autofocus required  ><br>
+      <div class="errorDiv">
+          <label for="email" title="Please enter your email address in the format name@example.com"  tabindex="2">Email Address</label><br>
+          <span class="errorMessage">This field is required</span>
+      </div>
+      <input name="email" id="userEmail" type="email" placeholder="e.g stephenking@lorem.com" autocomplete="email" autofocus required><br>
+      <div class="errorDiv">
+          <label for="number" title="Please enter your phone number in the format (123) 456-7890" tabindex="3" >Phone Number</label><br>
+          <span class="errorMessage">This field is required</span>
+      </div>
+      <input name="number" id="userNumber" type="tel" placeholder="e.g + 1 234 567 890" autocomplete="tel" autofocus required> 
+</form>
+<form class="main-footer" >
+  <button class="btn1" type="submit">NEXT STEP</button>
+</form>
+<footer>
+    <form>
+      <button class="btn1" type="submit">NEXT STEP</button>
+    </form>
+</footer>
+</section>   
+
+<!-- SECOND SECTION -->
+
+
+ <section style="display: none;" id="second-step" class="page">
+  <h1>Select your plan</h1>
+  <p>You have the option of monthly or yearly billing</p>
+  <ul id="plan-ul">
+      <li class="plan-li">
+          <img src="assets/images/icon-arcade.svg">
+          <div class="second-div">
+              <h5>Arcade</h5>
+              <p class="first-p">
+                 $9/mo
+              </p>
+          </div>
+      </li>
+      <li class="plan-li">   
+             <img src="assets/images/icon-advanced.svg">
+          <div class="second-div">
+              <h5>Advanced</h5>
+              <p class="second-p" >
+                 $12/mo
+              </p>
+          </div>
+      </li>
+      <li class="plan-li">
+          <img src="assets/images/icon-pro.svg">
+          <div class="second-div">
+              <h5>Pro</h5>
+              <p class="third-p">
+                 $15/mo
+              </p>
+          </div>
+      </li>
+  </ul>     
+      <section class="toggle-section">
+          <div class="slider-div active" id="monthly">Monthly</div>
+          <div class="fake-slider">
+            <div id="fake-toggle"></div>
+          </div>
+          <div class="slider-div" id="yearly">Yearly</div>
+        </section>  
+        <form class="main-footer-2">
+          <button  class="btn2" type="submit">Go back</button>
+          <button class="btn1" type="submit" disabled>NEXT STEP</button>
+        </form>    
+<footer class="second-footer">
+      <button class="btn2" type="submit">Go back</button>
+      <button class="btn1" type="submit" disabled>NEXT STEP</button>
+ </footer>
+</section>
+
+
+<!-- THIRD SECTION  -->
+
+
+<section style="display: none;" id="third-step" class="page">
+    <h1>Pick add-ons</h1>
+    <p>add-ons help enhance your gaming experience</p>
+    <ul id="adds-ul">
+        <li class="adds-li">
+            <label>
+                <input type="checkbox"> 
+              </label>
+            <div class="second-div">
+                <h5>Online service</h5>
+                <p>
+                   access to multiplayer games
+                </p>
+            </div>
+            <span class="adds-span">+$1/mo</span>
+        </li>
+        <li class="adds-li">    
+            <label>
+                <input type="checkbox">
+              </label>
+            <div class="second-div">
+                <h5>Larger storage</h5>
+                <p>
+                   Extra 1TB of cloud save
+                </p>
+            </div>
+            <span class="adds-span">+$2/mo</span>
+        </li>
+        <li class="adds-li">
+            <label>
+                <input type="checkbox"> 
+              </label>
+            <div class="second-div">
+                <h5>customizable profile</h5>
+                <p>
+                  Custom theme on your profile
+                </p>
+            </div>
+            <span class="adds-span">+$2/mo</span>
+        </li>
+    </ul>    
+    <form class="main-footer-2">
+        <button  class="btn2" type="submit">Go back</button>
+        <button class="btn1" type="submit" disabled >NEXT STEP</button>
+      </form>              
+<footer class="second-footer">
+        <button class="btn2" type="submit">Go back</button>
+        <button class="btn1" type="submit" disabled  >NEXT STEP</button>
+   </footer>
+</section> 
+
+
+<!-- FOURTH SECTION -->
+
+<section style="display: none;" id="fourth-step"  class="page">
+  <h1>Finishing-up</h1>
+  <p>double-check everything looks OK before confirming</p>
+ <div class="finish-div">
+<div class="change-div">  
+  <div>
+      <h5 class="chosen-package"></h5>
+  </div>
+  <span class="package-price"></span>
+  </div>
+  <div class="service-item">
+    <p class="chosen-service"></p>
+    <span class="service-price"></span>
+  </div>
+  
+  </div>
+
+ <div id="total-div">
+  <p>Total  :</p>
+  <span class="total-span"></span>
+  </div>
+  <form class="main-footer-2">
+      <button  class="btn2" type="submit">Go back</button>
+      <button  class="btn1" type="submit">CONFIRM</button>
+    </form>    
+<footer class="second-footer">
+      <button class="btn2" type="submit">Go back</button>
+      <button class="btn1" type="submit">CONFIRM</button>
+ </footer>
+ </section>   
+
+
+
+<!-- FIFTH SECTION -->
+
+<section style="display: none;" id="fifth-step" class="page">
+<div class="thank-you">
+  <img src="assets/images/icon-thank-you.svg">
+  
+   <h2>Thank you!</h2>
+   <p>Thanks for confirming your subscription! We hope you have fun using our platrfomr. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+  
+</div>
+</section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+  </html> 
+
