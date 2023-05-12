@@ -8,6 +8,8 @@ A responsive multi-step form that guides users through a series of steps to comp
 
 ## Demo 
 You can try out the live demo of the multi-step form here : https://mariamgogaladze.github.io/Multi-step-form/
+
+
 ## Features
 
 - Interactive multi-step form with a clear step indicator for user  guidance.
